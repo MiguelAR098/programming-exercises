@@ -4,14 +4,13 @@
 int main(){
     setlocale(LC_ALL, "Portuguese");
     
-    int n, s, c;
+    int n, soma = 0;
     
-    printf("Soma dos números:");
+    printf("Soma dos nÃºmeros:\n\n");
     
     for(n = 1; n <= 100; n++){
-        s = n + 1;
-        c = n * s / 2;
-        printf("\n %i + %i = %i", n, s, c);
+        soma += n;
+        printf("1 + %d = %d\n", n, soma);
     }
     
     return 0;
