@@ -10,5 +10,5 @@ int main(){
     printf("Digite o primeiro valor: ");
     scanf("%d", &y);
     
-    printf("%d", x + y);
+    printf("%d", x * y);
 }
