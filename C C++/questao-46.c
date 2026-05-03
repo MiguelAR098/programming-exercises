@@ -1,22 +1,25 @@
+#include <locale.h>
 #include <stdio.h>
-#include <windows.h>
 
-int main()
-{
-  SetConsoleOutputCP(65001);
-  int n, n2, i, fat;
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+    int n, i;
+    int fatorial = 1;
 
-  printf("Digite um nÃºmero: ");
-  scanf("%d", &n);
+    printf("Digite um número: ");
+    scanf("%d", &n);
 
-  printf("\nFatorial do nÃºmero %d", n);
-  for (i = n; i <= 1; i++) {
-     fat = n * (n - 1);
-     n2 = fat;
-     n2 = fat * (fat - 2);
-  }
+    if (n < 0) {
+        printf("Não existe fatorial de número negativo!\n");
+    } else {
+        i = 1;
+        while (i <= n) {
+            fatorial = fatorial * i;
+            i = i + 1;
+        }
 
-  printf("\nO resultado Ã©: %d", fat);
+        printf("O fatorial de %d é %d\n", n, fatorial);
+    }
 
-  return 0;
+    return 0;
 }
